@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif; /* Added a generic sans-serif fallback */
+}
+
+body {
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.container {
+  margin-top:100px ;
+  background-color: white;
+  width: 480px;
+  height: auto; /* Adjusted height to be auto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added a subtle box shadow */
+}
+
+.content {
+  width: 80%; /* Adjusted width for better responsiveness */
+  margin: auto;
+  text-align: center;
+  padding: 20px; /* Added padding for better spacing */
+}
+
+.img1 {
+  width: 70px;
+  margin-top: 20px;
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.detail {
+  width: 100%;
+  height: 40px; /* Adjusted height for better appearance */
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 15px;
+  color: #333; /* Changed text color to a darker shade */
+  border: 2px solid #ddd; /* Changed border color to a lighter shade */
+  border-radius: 20px;
+  outline: none;
+}
+
+.detail:focus {
+  box-shadow: 0 0 5px rgba(15, 91, 231, 0.4);
+}
+
+h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.int {
+  background-color: #f30d19;
+  color: white;
+}
+
+.int:hover {
+  background-color: #df0812;
+}
+
+.or {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.fbk {
+  background-color: rgb(9, 128, 240);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.fbk a {
+  text-decoration: none;
+  color: white;
+}
+
+.fbk:hover {
+  background-color: rgb(8, 110, 206);
+}
+
+.ggl {
+  text-align: center;
+  background-color: #ccc;
+}
+
+.ggl a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ggl:hover {
+  background-color: #a0a0a0;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 10px;
+  opacity: 0.7;
+}
+
+p:last-child {
+  opacity: 1;
+}
+
+hr {
+  width: 50%;
+  opacity: 0.4;
+  margin: 10px auto;
+}
+
+.upbtn{
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  top: 50px;
+  left: 140px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  width: 126px;
+  padding: 11px 20px;
+  background-color: rgb(241, 236, 236);
+  border-radius: 20px;
+}
