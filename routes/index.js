@@ -12,9 +12,17 @@ passport.use(new localStrategy(userModel.authenticate()));
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
+
+router.get('/login', function(req, res, next) {
+  res.render('login');
+});
+router.get('/feed', function(req, res, next) {
+  res.render('feed');
+});
+
 router.get('/profile', isLoggedIn ,function(req, res, next) {
   try {
-    res.send('profile');
+    res.render('profile');
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal Server Error');
@@ -39,9 +47,9 @@ router.post('/register', function(req, res, next) {
   }); 
 });
 
-router.get('/login', passport.authenticate('local',{
+router.post('/login', passport.authenticate('local',{
   successRedirect:'/profile',
-  failureRedirect:'/'
+  failureRedirect:'/login'
 }));
 
 router.get('/logout',function(req,res,next){
@@ -53,7 +61,7 @@ router.get('/logout',function(req,res,next){
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();
-  res.redirect('/');
+  res.redirect('/login');
 }
 
 
