@@ -150,3 +150,6 @@ hr {
   background-color: rgb(246, 201, 201);
   border-radius: 20px;
 }
+.error{
+  color: red;
+}
