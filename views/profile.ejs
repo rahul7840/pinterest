@@ -8,9 +8,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Hello, world!</title>
+    <title>Profile</title>
   </head>
 <body>
+  <div class="logout-field">
+    <div class="button">
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
     <div class="containnner">
         <div class="div-center">
           <div class="profile-content">
@@ -20,8 +26,8 @@
             <br>
             <div class="details">
               <div class="profile-name">
-                <h4>@Username</h4>
-                <h3>Devdas Kindarkhediya</h3>
+                <h4>@<%= finduser.username %></h4>
+                <h3><%= finduser.fullname %></h3>
                 <p>Tag line</p>
                 <p>Description</p>
               </div>
@@ -34,7 +40,24 @@
           </div>
         </div>
     </div>
-<div class="container">
+
+    <!-- <div class="upload-field">
+      <label for="fileInput" class="upload-button">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <span>Upload</span>
+          <input type="file" id="fileInput" name="file" style="display:none;">
+        </form>
+      </label>
+    </div> -->
+
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="text" name="filecaption" placeholder="Add caption">
+      <input type="file" name="file">
+      <input type="submit">
+    </form>
+
+    <div class="container">
     <div class="container">
         <div class="row">
           <div class="col-sm-4">
@@ -55,7 +78,7 @@
           </div>
           <div class="col-sm-4">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image cap">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1521510186458-bbbda7aef46b?q=80&w=1781&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Friends</h5>
               </div>
@@ -70,6 +93,6 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
-</html>
+</html
 
 

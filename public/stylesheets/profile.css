@@ -1,7 +1,56 @@
 body {
     font-family: "Rubik", sans-serif;
   }
-  
+  .logout-field {
+    text-align: right; 
+  }
+
+.button {
+    /* background-color: greenyellow; */
+    background-image: linear-gradient(62deg, #97c7f7 0%, #f99aa6 100%);
+    display: inline-block; 
+    padding: 10px 20px;
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold; 
+    border-radius: 40px; 
+    margin-top: 34px;
+    margin-right: 50px;
+}
+.button>a {
+color: black;
+}
+.button>a:hover {
+  color: white; 
+}
+.button:hover {
+  background-image: linear-gradient(62deg, #97c7f7 0%, #f0e8f9 100%);
+}
+/* upload button */
+.upload-field {
+  text-align: center;
+  margin-top: 20px; /* Optional: Add some top margin for spacing */
+}
+
+.upload-button {
+  display: inline-block;
+  background-image: linear-gradient(62deg, #97c7f7 0%, #f99aa6 100%);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hide the actual file input */
+.upload-button input {
+  display: none;
+
+}
+
+.upload-button:hover {
+  background-image: linear-gradient(62deg, #97c7f7 0%, #f0e8f9 100%);
+}
+
   .containnner {
     max-width: 1199px;
     margin: 0 auto;
