@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const userModel = require('./users');
-const postModel = require('./posts')
+const postModel =require('./posts')
 const passport = require('passport');
 const upload = require('./multer')
-const localStrategy = require("passport-local");
+const localStrategy =require("passport-local");
 const posts = require('./posts');
 
 passport.use(new localStrategy(userModel.authenticate()));
@@ -15,17 +15,14 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
-router.get('/login', function (req, res, next) {
-  res.render('login', { error: req.flash('error') });
+router.get('/login', function(req, res, next) {
+  res.render('login',{error:req.flash('error')});
 });
-router.get('/feed', function (req, res, next) {
-  res.render('feed');
-});
-router.get('/feed', function (req, res, next) {
+router.get('/feed', function(req, res, next) {
   res.render('feed');
 });
 
-router.get('/profile', isLoggedIn, async function (req, res, next) {
+router.get('/profile', isLoggedIn,async function(req, res, next) {
   try {
     const finduser = await userModel.findOne({
       username: req.session.passport.user,                       //user login hua details jo ,isLoggedIn,sesstion me store reta hai so thatswhy sess.passport
