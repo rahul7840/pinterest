@@ -23,8 +23,10 @@ app.use(session({
   saveUninitialized:false,
   secret:"he is she"
 }))
+
 app.use(passport.initialize());
 app.use(passport.session());
+  
 passport.serializeUser(usersRouter.serializeUser());
 passport.deserializeUser(usersRouter.deserializeUser());
 
